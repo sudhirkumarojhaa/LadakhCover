@@ -14,16 +14,14 @@ img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 100px;
+    padding: 2% 10%;
+    background-color: #000;
 }
 
 .back,
 .front {
-    border: 2px solid #000;
-    background-color: #000;
     position: relative;
-    padding: 5px;
-    width: 45%;
+    width: 47%;
 }
 
 .back::before {
@@ -33,7 +31,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 90%, rgba(255, 255, 255, 0.5) 90%), linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 10%, rgba(255, 255, 255, 0.5) 10%);
+    background: linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 51%, rgba(255, 255, 255, 0.5) 98%), linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.5) 31%);
 }
 
 .front::before {
@@ -43,37 +41,45 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 90%, rgba(255, 255, 255, 0.5) 90%), linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 10%, rgba(255, 255, 255, 0.5) 10%);
+    background: linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 75%, rgba(255, 255, 255, 0.5) 91%), linear-gradient(169.2deg, rgba(0, 0, 0, 0.5) 15%, rgba(255, 255, 255, 0.5) 64%);
 }
 
 .front .thumbnail {
-    height: 90vh;
+    height: 700px;
     background-image: url('../img/front.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .back .thumbnail {
-    height: 90vh;
+    height: 700px;
     background-image: url('../img/back.jpg');
+    text-align: left;
 }
 
 .sidebar {
-    background-color: #999;
-    width: 10%;
-    height: 92vh;
+    background-color: #1bd;
+    width: 4%;
+    height: 700px;
     font-family: 'Gruppo', cursive;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border-top: 40px solid #163566; */
 }
 
 .sidebar span {
     display: block;
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
     font-weight: 900;
     text-align: center;
     margin: 10px 0;
+    text-shadow: 0 6px 8px #000;
 }
 
 .down {
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .content {
@@ -83,7 +89,7 @@ img {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     padding: 20px;
@@ -94,37 +100,83 @@ img {
     text-transform: capitalize;
     text-shadow: 0 5px 15px #000;
     font-family: 'Fredericka the Great', cursive;
-    font-size: 80px;
-    margin-top: 100px;
+    font-size: 40px;
+    margin-top: 30px;
 }
 
 .front .content .subtitle {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
 }
 
 .front .content .author {
     font-family: 'Montserrat', sans-serif;
-    color: #000;
+    color: #fff;
+    letter-spacing: 5px;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 10px;
 }
 
 .front .footer {
-  text-transform: uppercase;
-  font-size: 12px;
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 900;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.back .content {
+    text-align: left;
+    font-size: 12px;
+    color: beige;
+}
+
+.back .content .title {
+    text-transform: capitalize;
+}
+
+.back .content .subtitle {
+    font-size: 11px;
+}
+
+.back .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    margin-top: 25px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
 }
 
 .bar {
-  width :150px;
-  height: 150px;
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+    .display {
+        padding: 2px 5px;
+    }
+    .back {
+        width: 100%;
+        order: 2;
+        margin: 5px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .front {
+        width: 100%;
+        order: 1;
+        margin: 5px;
+    }
 }
