@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #f7f7f8;
+    background-color: #000;
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 .back,
 .front {
     position: relative;
-    width: 47%;
+    width: 33%;
 }
 
 .back::before {
@@ -134,11 +134,13 @@ img {
 }
 
 .back .content .title {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    color: wheat;
+    font-size: 18px;
 }
 
 .back .content .subtitle {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .back .footer {
@@ -160,6 +162,13 @@ img {
 .bar {
     width: 80px;
     height: 80px;
+}
+
+@media screen and (max-width: 1367px) and (min-width: 1024px) {
+    .back,
+    .front {
+        width: 48%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
