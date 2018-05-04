@@ -76,6 +76,7 @@ img {
     text-align: center;
     margin: 10px 0;
     text-shadow: 0 6px 8px #000;
+    font-size: 20px;
 }
 
 .down {
@@ -140,7 +141,7 @@ img {
 }
 
 .back .content .subtitle {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .back .footer {
