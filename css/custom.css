@@ -245,7 +245,6 @@ img {
 .fourthcover .front .thumbnail {
     height: 700px;
     background-image: url('../img/arms.jpg');
-    padding: 20px;
     z-index: 1000;
 }
 
